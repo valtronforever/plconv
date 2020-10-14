@@ -1,5 +1,5 @@
 from gi.repository import Gtk
-from models.supplier import Supplier
+from plconv.models.supplier import Supplier
 
 
 @Gtk.Template.from_file('plconv/widgets/supplier_listbox_row.glade')

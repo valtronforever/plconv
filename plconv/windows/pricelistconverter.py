@@ -1,7 +1,7 @@
 from gi.repository import Gtk
-from widgets.supplier_listbox_row import SupplierListBoxRow
-from models.supplier import Supplier
-from data.suppliers import suppliers
+from plconv.widgets.supplier_listbox_row import SupplierListBoxRow
+from plconv.models.supplier import Supplier
+from plconv.data.suppliers import suppliers
 
 
 @Gtk.Template.from_file('plconv/windows/pricelistconverter.glade')

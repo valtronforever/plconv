@@ -1,11 +1,11 @@
-from widgets.layout_basic import LayoutBasic
-from widgets.layout_multiple import LayoutMultiple
-from widgets.layout_mmo import LayoutMmo
-from convert.blade_n import blade_n
-from convert.pg import pg
-from convert.pg_mmo import pg_mmo
-from convert.vega import vega
-from convert.sokul import sokul
+from plconv.widgets.layout_basic import LayoutBasic
+from plconv.widgets.layout_multiple import LayoutMultiple
+from plconv.widgets.layout_mmo import LayoutMmo
+from plconv.convert.blade_n import blade_n
+from plconv.convert.pg import pg
+from plconv.convert.pg_mmo import pg_mmo
+from plconv.convert.vega import vega
+from plconv.convert.sokul import sokul
 
 suppliers = [
     {

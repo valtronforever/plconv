@@ -3,7 +3,7 @@ from pathlib import Path
 import concurrent.futures
 import logging
 import traceback
-from models.supplier import Supplier
+from plconv.models.supplier import Supplier
 
 
 def get_documents_path():
