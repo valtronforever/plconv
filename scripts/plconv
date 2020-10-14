@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+import plconv.main as app
+app.main()
