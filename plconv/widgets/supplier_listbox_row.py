@@ -1,8 +1,9 @@
 from gi.repository import Gtk
+from pathlib import Path
 from plconv.models.supplier import Supplier
 
 
-@Gtk.Template.from_file('plconv/widgets/supplier_listbox_row.glade')
+@Gtk.Template.from_file(str(Path(__file__).parents[0] / 'supplier_listbox_row.glade'))
 class SupplierListBoxRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SupplierListBoxRow'
 

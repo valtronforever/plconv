@@ -10,7 +10,7 @@ def get_documents_path():
     return GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOCUMENTS)
 
 
-@Gtk.Template.from_file('plconv/widgets/layout_basic.glade')
+@Gtk.Template.from_file(str(Path(__file__).parents[0] / 'layout_basic.glade'))
 class LayoutBasic(Gtk.Box):
     __gtype_name__ = 'LayoutBasic'
 

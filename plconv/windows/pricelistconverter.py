@@ -1,10 +1,11 @@
+from pathlib import Path
 from gi.repository import Gtk
 from plconv.widgets.supplier_listbox_row import SupplierListBoxRow
 from plconv.models.supplier import Supplier
 from plconv.data.suppliers import suppliers
 
 
-@Gtk.Template.from_file('plconv/windows/pricelistconverter.glade')
+@Gtk.Template.from_file(str(Path(__file__).parents[0] / 'pricelistconverter.glade'))
 class PricelistConverterWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'PricelistConverterWindow'
 
