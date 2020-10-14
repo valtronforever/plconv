@@ -24,7 +24,9 @@ class Application(Gtk.Application):
         win.present()
 
 
-def main(version):
+def main(version=None):
+    if version is None:
+        version = VERSION
     app = Application()
     return app.run(sys.argv)
 
