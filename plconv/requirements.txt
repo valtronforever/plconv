@@ -1,0 +1,9 @@
+pycairo
+pygobject
+pydantic
+numexpr
+bottleneck
+openpyxl
+xlrd
+xlwt
+pandas
