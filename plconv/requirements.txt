@@ -1,3 +1,4 @@
+dataclasses
 pycairo
 pygobject
 pydantic
