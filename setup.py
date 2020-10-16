@@ -17,7 +17,6 @@ setuptools.setup(
     install_requires=[
         'pydantic',
         'numexpr',
-        'bottleneck',
         'openpyxl',
         'xlrd',
         'xlwt',
