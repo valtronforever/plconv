@@ -15,9 +15,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     package_data={'plconv': ['windows/*.glade', 'widgets/*.glade']},
     install_requires=[
-        'dataclasses',
-        'pycairo',
-        'pygobject',
         'pydantic',
         'numexpr',
         'bottleneck',
