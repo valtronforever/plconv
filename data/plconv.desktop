@@ -2,6 +2,7 @@
 Type=Application
 Name=Plconv
 GenericName=Plconv
+Categories=Office;Spreadsheet;
 Exec=plconv
 StartupNotify=true
 Terminal=false

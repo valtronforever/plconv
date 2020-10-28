@@ -16,13 +16,16 @@ mkdir -p ${DIST_DIR}/${FULLNAME}/opt/pharmstudio
 mkdir -p ${DIST_DIR}/${FULLNAME}/usr/bin
 mkdir -p ${DIST_DIR}/${FULLNAME}/DEBIAN
 mkdir -p ${DIST_DIR}/${FULLNAME}/usr/share/icons/hicolor/scalable/apps
+mkdir -p ${DIST_DIR}/${FULLNAME}/usr/share/applications
 
 sudo docker build -f ${BASEDIR}/Dockerfile-${DISTRO} . -t ${DISTRO}-build
 sudo docker create -ti --name dummy ${DISTRO}-build bash
 sudo docker cp dummy:/opt/pharmstudio/plconv ${DIST_DIR}/${FULLNAME}/opt/pharmstudio
 sudo docker rm -f dummy
 sudo chown -R user.user ${DIST_DIR}
-cp ${DIST_DIR}/${FULLNAME}/opt/pharmstudio/plconv/data/plconv.svg ${DIST_DIR}/${FULLNAME}/usr/share/icons/hicolor/scalable/apps/
+cp $(dirname "$0")/data/plconv.svg ${DIST_DIR}/${FULLNAME}/usr/share/icons/hicolor/scalable/apps/
+cp $(dirname "$0")/data/plconv.desktop ${DIST_DIR}/${FULLNAME}/usr/share/applications
+
 
 /bin/cat <<EOF > ${DIST_DIR}/${FULLNAME}/usr/bin/${PACKAGE_NAME}
 #!/bin/sh
@@ -44,16 +47,8 @@ Description: Pharmstudio plconv
  Pricelist converter for pharmstudio
 EOF
 
-/bin/cat <<EOF > ${DIST_DIR}/${FULLNAME}/DEBIAN/postinst
-#!/bin/sh
-sudo -u \${SUDO_USER} xdg-desktop-icon install --novendor /opt/pharmstudio/plconv/data/plconv.desktop
-exit 0
-EOF
-chmod +x ${DIST_DIR}/${FULLNAME}/DEBIAN/postinst
-
 /bin/cat <<EOF > ${DIST_DIR}/${FULLNAME}/DEBIAN/prerm
 #!/bin/sh
-xdg-desktop-icon uninstall plconv.desktop
 py3clean /opt/pharmstudio/plconv
 exit 0
 EOF
