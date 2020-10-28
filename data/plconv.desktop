@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Plconv
+GenericName=Plconv
+Exec=plconv
+StartupNotify=true
+Terminal=false
+Icon=plconv
