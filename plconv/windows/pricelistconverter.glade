@@ -6,11 +6,12 @@
     <property name="can_focus">False</property>
     <property name="default_width">700</property>
     <property name="default_height">300</property>
+    <property name="icon_name">plconv</property>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="header_bar">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="title">Hello, World!</property>
+        <property name="title">Pharmstudio plconv</property>
         <property name="show_close_button">True</property>
       </object>
     </child>
