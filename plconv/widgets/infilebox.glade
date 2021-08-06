@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkFileFilter" id="filefilter_pricelist">
+    <patterns>
+      <pattern>*.xls</pattern>
+      <pattern>*.xlsx</pattern>
+      <pattern>*.mmo</pattern>
+    </patterns>
+  </object>
+  <template class="InFileBox" parent="GtkBox">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="name">150</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Файл прайс-листа 1:</property>
+        <property name="xalign">0</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkFileChooserButton" id="filepath">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="filter">filefilter_pricelist</property>
+        <property name="title" translatable="yes"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="pack_type">end</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </template>
+</interface>
