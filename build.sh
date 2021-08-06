@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGE_NAME="plconv"
-VERSION="1.1-1"
+VERSION="1.1-2"
 BASEDIR=$(dirname "$0")/build
 
 for DISTRO in bionic focal
