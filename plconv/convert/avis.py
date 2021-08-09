@@ -21,6 +21,7 @@ def avis(params: ConvertParams):
         df['Код'] = df['Код'].astype(int).astype(str)
         df.insert(loc=df.columns.get_loc("Наименование") + 1, column='Производитель', value=supplier)
         df.insert(loc=df.columns.get_loc("Цена с НДС") + 1, column='НДС', value=20)
+        df = df[['Наименование', 'Производитель', 'Цена с НДС', 'НДС', 'Упак.', 'Код']]
 
         if result_df is None:
             result_df = df
