@@ -7,6 +7,7 @@ from plconv.convert.pg import pg
 from plconv.convert.pg_mmo import pg_mmo
 from plconv.convert.vega import vega
 from plconv.convert.sokul import sokul
+from plconv.convert.sokul_mmo import sokul_mmo
 from plconv.convert.avis import avis
 from plconv.convert.avis_mmo import avis_mmo
 
@@ -40,6 +41,20 @@ suppliers = [
         'name': "Сокульский",
         'widget': LayoutMultiple,
         'convert': sokul,
+    },
+    {
+        'id': 'sokul_mmo',
+        'name': "Сокульский (Накладные)",
+        'widget': LayoutBox,
+        'convert': sokul_mmo,
+        'params': {
+            'in_params': [{
+                'label': 'Накладная mmo',
+            }],
+            'out_params': {
+                'name': 'сокульский'
+            },
+        }
     },
     {
         'id': 'avis',
